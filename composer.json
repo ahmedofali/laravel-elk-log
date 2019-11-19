@@ -1,18 +1,18 @@
 {
-    "name": "ahmedofali/laravel-elastic-search-log",
+    "name": "ahmedofali/laravel-elk-log",
     "description": "Integrate laravel with elastic search for sending all logs to elastic search ",
     "keywords": [
         "laravel",
-        ":elasticsearch",
-        ":log"
+        "elasticsearch",
+        "log"
     ],
-    "homepage": "https://github.com/ahmedofali/laravel-elastic-search-log",
+    "homepage": "https://github.com/ahmedofali/laravel-elk-log",
     "license": "MIT",
     "authors": [
         {
-            "name": ":ahmedofali",
-            "email": ":dev.ahmed.abbas@gmail.com",
-            "homepage": "https://github.com/ahmedofali/laravel-elastic-search-log",
+            "name": "ahmedofali",
+            "email": "dev.ahmed.abbas@gmail.com",
+            "homepage": "https://github.com/ahmedofali/laravel-elk-log",
             "role": "Developer"
         }
     ],
@@ -28,15 +28,6 @@
         "psr-4": {
             "Ahmedofali\\LaravelElkLog\\": "src"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ahmedofali\\LaravelElkLog\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true
