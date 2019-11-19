@@ -26,20 +26,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Ahmedofali\\LaravelElkLog\\": "src/"
+            "Ahmedofali\\Elklog\\": "src/"
         }
-    },
-    "config": {
-        "sort-packages": true
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ahmedofali\\LaravelElkLog\\ElkServiceProvider"
-            ],
-            "aliases": {
-                "Elk": "Ahmedofali\\LaravelElkLog\\ElkFacade"
-            }
+                "Ahmedofali\\Elklog\\ElkServiceProvider"
+            ]
         }
     }
 }

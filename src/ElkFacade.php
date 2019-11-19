@@ -1,6 +1,6 @@
 <?php
 
-namespace Ahmedofali\LaravelElkLog;
+namespace Ahmedofali\Elklog;
 
 use Illuminate\Support\Facades\Facade;
 

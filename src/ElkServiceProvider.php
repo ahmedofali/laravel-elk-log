@@ -1,14 +1,14 @@
 <?php
 
-namespace Ahmedofali\LaravelElkLog;
+namespace Ahmedofali\Elklog;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Monolog\Formatter\ElasticsearchFormatter;
 
-class ElkServiceProvider extends ServiceProvider
+class ElkServiceProvider extends LaravelServiceProvider
 {
     /**
      * Bootstrap the application services.
