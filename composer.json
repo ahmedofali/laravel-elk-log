@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ahmedofali\\LaravelElkLog\\": "src"
+            "Ahmedofali\\LaravelElkLog\\": "src/"
         }
     },
     "config": {
