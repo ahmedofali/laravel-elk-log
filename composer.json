@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Ahmedofali\\Elklog\\": "src/"
+            "Elklog\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ahmedofali\\Elklog\\ElkServiceProvider"
+                "Elklog\\ElkServiceProvider"
             ]
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ahmedofali\Elklog;
+namespace Elklog;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
@@ -23,7 +23,6 @@ class ElkServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        dd( 'aj' );
         $this->mergeConfigFrom( __DIR__.'/../config/log.php', 'logging' );
 
         $this->app->singleton(Client::class, function ($app) {
