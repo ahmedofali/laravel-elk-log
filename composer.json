@@ -33,7 +33,10 @@
         "laravel": {
             "providers": [
                 "Elklog\\ElkServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "elkClient": "Elklog\\ElasticSearchClientFacade"
+            }
         }
     }
 }

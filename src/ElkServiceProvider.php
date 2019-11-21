@@ -31,10 +31,26 @@ class ElkServiceProvider extends LaravelServiceProvider
             return ClientBuilder::create()->setHosts([$url])->build();
         });
 
+        $this->app->singleton('elkClient', function ($app) {
+            $url = $this->getHost();
+
+            return ClientBuilder::create()->setHosts([$url])->build();
+        });
+
         $this->app->bind(ElasticsearchFormatter::class, function ($app) {
             return new ElasticsearchFormatter( $this->getIndexName(), $this->getIndexType() );
         });
 
+    }
+
+    /**
+     * check if live environment
+     *
+     * @return bool
+     */
+    public function isLiveEnvironment()
+    {
+        return ! App::environment(['local', 'staging']);
     }
 
     /**
@@ -44,13 +60,13 @@ class ElkServiceProvider extends LaravelServiceProvider
      */
     public function getIndexType(): string
     {
-        if( App::environment(['local', 'staging']) )
+        if( ! $this->isLiveEnvironment() )
         {
             return env('ELK_TYPE_LOCAL', '_doc');
         }
         else
         {
-            return env('ELK_TYPE_LOCAL', '_doc');
+            return env('ELK_TYPE_LIVE', '_doc');
         }
     }
 
@@ -61,7 +77,7 @@ class ElkServiceProvider extends LaravelServiceProvider
      */
     public function getIndexName(): string
     {
-        if( App::environment(['local', 'staging']) )
+        if( ! $this->isLiveEnvironment() )
         {
             return env('ELK_INDEX_LOCAL', 'elastic_local');
         }
@@ -78,7 +94,7 @@ class ElkServiceProvider extends LaravelServiceProvider
      */
     public function getHost(): string
     {
-        if( App::environment(['local', 'staging']) )
+        if( ! $this->isLiveEnvironment() )
         {
             return env('ELK_HOST_LOCAL', 'http://localhost:9200');
         }
