@@ -7,7 +7,7 @@ This package is simple initializer of elasticsearch with laravel
 You can install the package via composer:
 
 ```bash
-composer require ahmedofali/laravel-el-log
+composer require ahmedofali/laravel-elk-log
 ```
 
 ## Usage
