@@ -13,16 +13,16 @@ composer require ahmedofali/laravel-el-log
 ## Usage
 
 ``` dotenv
-ELK_HOST_LOCAL=http://asalahnew_elasticsearch_1:9200
-ELK_INDEX_LOCAL=laravel_local
+ELK_HOST_LOCAL=http://yourlocalurl:9200
+ELK_INDEX_LOCAL=elastic_local
 ELK_TYPE_LOCAL=_doc
 
-ELK_HOST_LIVE=http://asalahnew_elasticsearch_1:9200
-ELK_INDEX_LIVE=elastic_local
+ELK_HOST_LIVE=http://yourliveurl:9200
+ELK_INDEX_LIVE=elastic_live
 ELK_TYPE_LIVE=_doc
 ```
 
-Add this to merge this with logging.php config file 
+Merge this with logging.php config file 
 ```php
 
 return [
