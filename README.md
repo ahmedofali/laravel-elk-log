@@ -12,14 +12,10 @@ composer require ahmedofali/laravel-elk-log
 
 ## Usage
 
-``` dotenv
-ELK_HOST_LOCAL=http://yourlocalurl:9200
-ELK_INDEX_LOCAL=elastic_local
-ELK_TYPE_LOCAL=_doc
+Run the below command to get installation tips. 
 
-ELK_HOST_LIVE=http://yourliveurl:9200
-ELK_INDEX_LIVE=elastic_live
-ELK_TYPE_LIVE=_doc
+``` bash
+php artisan elk:installTips
 ```
 
 Merge this with logging.php config file 
@@ -39,6 +35,8 @@ return [
 ];
 
 ```
+
+After you publish config file you will find new config file called elk.php add your environment configuration and you are ready to go with elasticsearch.   
 
 ## Credits
 
